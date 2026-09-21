@@ -1,0 +1,150 @@
+/* ==========================================================================
+   DSA Sorting & Searching Visualizer - Custom Theme
+   Clean Dark Technology Theme (Accents: Electric Blue & Purple)
+   ========================================================================== */
+
+/* Main Background and Typography */
+.stApp {
+    background-color: #0b0f19;
+    color: #e2e8f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: #080b12 !important;
+    border-right: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+[data-testid="stSidebar"] .stRadio label {
+    color: #cbd5e1 !important;
+    font-weight: 500;
+}
+
+/* Header & Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: #f8fafc !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+.gradient-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #f8fafc;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle-text {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
+
+/* Modern Card Component */
+.dsa-card {
+    background: #111827;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.dsa-card:hover {
+    border-color: rgba(139, 92, 246, 0.45);
+}
+
+.dsa-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #a78bfa;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dsa-card-desc {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Status & Step Information Box */
+.status-box {
+    background: #0d1322;
+    border: 1px solid #3b82f6;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.status-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.status-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+/* Input Array Display */
+.array-preview-box {
+    background: #0f172a;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-family: 'Fira Code', monospace;
+    color: #38bdf8;
+    font-size: 1rem;
+}
+
+/* Result Card */
+.result-card {
+    background: linear-gradient(145deg, #131d33, #0d1527);
+    border: 1px solid #10b981;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
+}
+
+.result-card-notfound {
+    background: linear-gradient(145deg, #24131a, #1a0d13);
+    border: 1px solid #f43f5e;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 20px rgba(244, 63, 94, 0.15);
+}
+
+/* Metric Display Adjustments */
+[data-testid="stMetricValue"] {
+    color: #f8fafc !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #94a3b8 !important;
+    font-size: 0.85rem !important;
+}
+
+/* Custom Buttons */
+.stButton > button {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "DSA Sorting & Searching Visualizer",
+  "description": "Understand algorithms through interactive step-by-step visualizations of sorting and searching algorithms with real-time comparisons, swaps, complexity metrics, and source code.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
