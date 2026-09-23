@@ -238,39 +238,16 @@ streamlit run app.py`,
       const zip = new JSZip();
       const folder = zip.folder('DSA-Visualizer') || zip;
 
-      // We read actual files or write the bundle
-      // Fetch or use predefined content
-      folder.file('requirements.txt', `streamlit>=1.32.0\nplotly>=5.19.0\nnumpy>=1.26.0\npandas>=2.2.0\n`);
-      folder.file('README.md', `# DSA Sorting & Searching Visualizer\n\nUnderstand algorithms through interactive visualization.\n\nAuthor: Abhijit Pawar\n\nRun:\npip install -r requirements.txt\nstreamlit run app.py\n`);
+      // Add all project files directly from bundle
+      files.forEach((file) => {
+        folder.file(file.path, file.content);
+      });
 
-      // Create algorithms and utils folders in zip
+      // Ensure Python packages have __init__.py
       const algoFolder = folder.folder('algorithms');
       algoFolder?.file('__init__.py', '"""Algorithms package."""\n');
       const utilsFolder = folder.folder('utils');
       utilsFolder?.file('__init__.py', '"""Utils package."""\n');
-      const assetsFolder = folder.folder('assets');
-
-      // Fetch actual files from root if accessible, or populate
-      const resApp = await fetch('/app.py').catch(() => null);
-      if (resApp && resApp.ok) {
-        folder.file('app.py', await resApp.text());
-      }
-      const resSort = await fetch('/algorithms/sorting.py').catch(() => null);
-      if (resSort && resSort.ok) {
-        algoFolder?.file('sorting.py', await resSort.text());
-      }
-      const resSearch = await fetch('/algorithms/searching.py').catch(() => null);
-      if (resSearch && resSearch.ok) {
-        algoFolder?.file('searching.py', await resSearch.text());
-      }
-      const resUtils = await fetch('/utils/helpers.py').catch(() => null);
-      if (resUtils && resUtils.ok) {
-        utilsFolder?.file('helpers.py', await resUtils.text());
-      }
-      const resCss = await fetch('/assets/style.css').catch(() => null);
-      if (resCss && resCss.ok) {
-        assetsFolder?.file('style.css', await resCss.text());
-      }
 
       const blob = await zip.generateAsync({ type: 'blob' });
       const url = URL.createObjectURL(blob);
